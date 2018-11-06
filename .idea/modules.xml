@@ -4,9 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ThreeBody.iml" filepath="$PROJECT_DIR$/ThreeBody.iml" />
       <module fileurl="file://$PROJECT_DIR$/emoji/emoji.iml" filepath="$PROJECT_DIR$/emoji/emoji.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hipda/hipda.iml" filepath="$PROJECT_DIR$/hipda/hipda.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hipda.iml" filepath="$PROJECT_DIR$/hipda.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hipda/hipda-hipda.iml" filepath="$PROJECT_DIR$/hipda/hipda-hipda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threebody/hipda.iml" filepath="$PROJECT_DIR$/threebody/hipda.iml" />
     </modules>
   </component>
 </project>
