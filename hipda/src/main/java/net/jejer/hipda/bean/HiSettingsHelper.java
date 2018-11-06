@@ -648,7 +648,7 @@ public class HiSettingsHelper {
     }
 
     private boolean isEncodeUtf8FromPref() {
-        mEncodeUtf8 = mSharedPref.getBoolean(PERF_ENCODEUTF8, false);
+        mEncodeUtf8 = mSharedPref.getBoolean(PERF_ENCODEUTF8, true);
         return mEncodeUtf8;
     }
 

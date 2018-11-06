@@ -282,14 +282,14 @@ public class OkHttpHelper {
         }
 
         String encoding = HiSettingsHelper.getInstance().getEncode();
-        String contextType = response.headers().get("Content-Type");
-        if (!TextUtils.isEmpty(contextType)) {
-            if (contextType.toUpperCase().contains("UTF")) {
-                encoding = "UTF-8";
-            } else if (contextType.toUpperCase().contains("GBK")) {
-                encoding = "GBK";
-            }
-        }
+//        String contextType = response.headers().get("Content-Type");
+//        if (!TextUtils.isEmpty(contextType)) {
+//            if (contextType.toUpperCase().contains("UTF")) {
+//                encoding = "UTF-8";
+//            } else if (contextType.toUpperCase().contains("GBK")) {
+//                encoding = "GBK";
+//            }
+//        }
         return new String(response.body().bytes(), encoding);
     }
 
@@ -362,7 +362,7 @@ public class OkHttpHelper {
     public boolean isLoggedIn() {
         List<Cookie> cookies = mCookiestore.getCookies();
         for (Cookie cookie : cookies) {
-            if ("cdb_auth".equals(cookie.name())) {
+            if ("HFT_auth".equals(cookie.name())) {
                 return true;
             }
         }
@@ -372,7 +372,7 @@ public class OkHttpHelper {
     public String getAuthCookie() {
         List<Cookie> cookies = mCookiestore.getCookies();
         for (Cookie cookie : cookies) {
-            if ("cdb_auth".equals(cookie.name())) {
+            if ("HFT_auth".equals(cookie.name())) {
                 return cookie.value();
             }
         }
