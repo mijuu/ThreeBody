@@ -145,7 +145,7 @@ public class HiParserThreadDetail {
             }
 
             //author
-            Elements postauthorAES = postE.select("table tbody tr td.postauthor div.postinfo a");
+            Elements postauthorAES = postE.select("table tbody tr td.postauthor div.popuserinfo p a");
             if (postauthorAES.size() == 0) {
                 continue;
             }
