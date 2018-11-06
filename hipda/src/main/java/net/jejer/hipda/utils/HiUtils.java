@@ -20,16 +20,16 @@ import java.util.Map;
 public class HiUtils {
     public static final String UserAgentPrefix = "net.jejer.hipda ";
 
-    public static final String ForumServer = "http://www.hi-pda.com";
-    public static final String ForumServerSsl = "https://www.hi-pda.com";
-    public static final String ImageHost = "http://img.hi-pda.com";
+    public static final String ForumServer = "http://bbs.threebody.com.cn";
+    public static final String ForumServerSsl = "http://bbs.threebody.com.cn";
+    public static final String ImageHost = "http://bbs.threebody.com.cn";
     public static final String AvatarPath = "uc_server/data/avatar/";
-    public static final String CookieDomain = "hi-pda.com";
+    public static final String CookieDomain = "bbs.threebody.com.cn";
     public static final String AvatarSuffix = "_avatar_middle.jpg";
     public static final String NewPMImage = "images/default/notice_newpm.gif";
-    public static final String SmiliesPattern = CookieDomain + "/forum/images/smilies/";
-    public static final String ForumImagePattern = CookieDomain + "/forum/images/";
-    public static final String ForumUrlPattern = "." + CookieDomain + "/forum/";
+    public static final String SmiliesPattern = CookieDomain + "/images/smilies/";
+    public static final String ForumImagePattern = CookieDomain + "/images/";
+    public static final String ForumUrlPattern = "." + CookieDomain + "/";
 
     public static final int CLIENT_TID = 1579403;
 
@@ -123,9 +123,9 @@ public class HiUtils {
         String imageHost = HiSettingsHelper.getInstance().getImageHost();
         String forumServer = HiSettingsHelper.getInstance().getForumServer();
 
-        BaseUrl = forumServer + "/forum/";
+        BaseUrl = forumServer + "/";
 
-        ImageBaseUrl = imageHost + "/forum/";
+        ImageBaseUrl = imageHost + "/";
         AvatarBaseUrl = BaseUrl + AvatarPath;
 
         ThreadListUrl = BaseUrl + "forumdisplay.php?fid=";

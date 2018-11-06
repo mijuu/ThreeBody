@@ -499,7 +499,7 @@ public class Utils {
             DownloadManager.Request req = new DownloadManager.Request(Uri.parse(url));
             req.addRequestHeader("User-agent", HiUtils.getUserAgent());
             if (url.contains(HiUtils.ForumUrlPattern)) {
-                req.addRequestHeader("Cookie", "cdb_auth=" + authCookie);
+                req.addRequestHeader("Cookie", "HFT_auth=" + authCookie);
             }
             req.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             req.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename);
