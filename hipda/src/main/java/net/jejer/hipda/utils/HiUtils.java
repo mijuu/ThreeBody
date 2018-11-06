@@ -23,7 +23,7 @@ public class HiUtils {
     public static final String ForumServer = "http://bbs.threebody.com.cn";
     public static final String ForumServerSsl = "http://bbs.threebody.com.cn";
     public static final String ImageHost = "http://bbs.threebody.com.cn";
-    public static final String AvatarPath = "uc_server/data/avatar/";
+    public static final String AvatarPath = "uc_server/avatar.php";
     public static final String CookieDomain = "bbs.threebody.com.cn";
     public static final String AvatarSuffix = "_avatar_middle.jpg";
     public static final String NewPMImage = "images/default/notice_newpm.gif";
@@ -85,32 +85,36 @@ public class HiUtils {
     public final static int FID_DISCOVERY = 2;
 
     public final static Forum[] FORUMS = {
-            new Forum(FID_DISCOVERY, "Discovery", FontAwesome.Icon.faw_cc_discover),
-            new Forum(FID_BS, "Buy & Sell", FontAwesome.Icon.faw_shopping_cart),
-            new Forum(7, "Geek Talks", FontAwesome.Icon.faw_forumbee),
-            new Forum(59, "E-INK", FontAwesome.Icon.faw_book),
-            new Forum(12, "PalmOS", FontAwesome.Icon.faw_mobile),
-            new Forum(57, "疑似机器人", FontAwesome.Icon.faw_reddit),
-            new Forum(63, "已完成交易", FontAwesome.Icon.faw_check_square),
-            new Forum(62, "Joggler", FontAwesome.Icon.faw_cogs),
-            new Forum(5, "站务与公告", FontAwesome.Icon.faw_bullhorn),
-            new Forum(9, "Smartphone", FontAwesome.Icon.faw_phone_square),
-            new Forum(56, "iPhone, iPod Touch，iPad", FontAwesome.Icon.faw_apple),
-            new Forum(60, "Android, Chrome, & Google", FontAwesome.Icon.faw_android),
-            new Forum(14, "Windows Mobile，PocketPC，HPC", FontAwesome.Icon.faw_windows),
-            new Forum(22, "麦客爱苹果", FontAwesome.Icon.faw_desktop),
-            new Forum(50, "DC,NB,MP3,Gadgets", FontAwesome.Icon.faw_camera_retro),
-            new Forum(24, "意欲蔓延", FontAwesome.Icon.faw_coffee),
-            new Forum(23, "随笔与个人文集", FontAwesome.Icon.faw_pencil_square),
-            new Forum(25, "吃喝玩乐", FontAwesome.Icon.faw_cutlery),
-            new Forum(51, "La Femme", FontAwesome.Icon.faw_female),
-            new Forum(65, "改版建议", FontAwesome.Icon.faw_commenting),
-            new Forum(64, "只讨论2.0", FontAwesome.Icon.faw_child)
+            new Forum(2, "三体（Threebody）", FontAwesome.Icon.faw_star),
+            new Forum(6, "猫族（Cat）-喵星人，汪星人（Meow）", FontAwesome.Icon.faw_heart),
+            new Forum(7, "生命，宇宙及一切 (Life The Universe and Everything) ", FontAwesome.Icon.faw_universal_access),
+//            new Forum(FID_DISCOVERY, "Discovery", FontAwesome.Icon.faw_cc_discover),
+//            new Forum(FID_BS, "Buy & Sell", FontAwesome.Icon.faw_shopping_cart),
+//            new Forum(7, "Geek Talks", FontAwesome.Icon.faw_forumbee),
+//            new Forum(59, "E-INK", FontAwesome.Icon.faw_book),
+//            new Forum(12, "PalmOS", FontAwesome.Icon.faw_mobile),
+//            new Forum(57, "疑似机器人", FontAwesome.Icon.faw_reddit),
+//            new Forum(63, "已完成交易", FontAwesome.Icon.faw_check_square),
+//            new Forum(62, "Joggler", FontAwesome.Icon.faw_cogs),
+//            new Forum(5, "站务与公告", FontAwesome.Icon.faw_bullhorn),
+//            new Forum(9, "Smartphone", FontAwesome.Icon.faw_phone_square),
+//            new Forum(56, "iPhone, iPod Touch，iPad", FontAwesome.Icon.faw_apple),
+//            new Forum(60, "Android, Chrome, & Google", FontAwesome.Icon.faw_android),
+//            new Forum(14, "Windows Mobile，PocketPC，HPC", FontAwesome.Icon.faw_windows),
+//            new Forum(22, "麦客爱苹果", FontAwesome.Icon.faw_desktop),
+//            new Forum(50, "DC,NB,MP3,Gadgets", FontAwesome.Icon.faw_camera_retro),
+//            new Forum(24, "意欲蔓延", FontAwesome.Icon.faw_coffee),
+//            new Forum(23, "随笔与个人文集", FontAwesome.Icon.faw_pencil_square),
+//            new Forum(25, "吃喝玩乐", FontAwesome.Icon.faw_cutlery),
+//            new Forum(51, "La Femme", FontAwesome.Icon.faw_female),
+//            new Forum(65, "改版建议", FontAwesome.Icon.faw_commenting),
+//            new Forum(64, "只讨论2.0", FontAwesome.Icon.faw_child)
     };
 
     private final static Map<Integer, Forum> FORUMS_MAP;
 
-    public final static int[] DEFAULT_FORUMS = {FID_DISCOVERY, FID_BS, 7, 59};
+//    public final static int[] DEFAULT_FORUMS = {FID_DISCOVERY, FID_BS, 7, 59};
+    public final static int[] DEFAULT_FORUMS = {2, 6, 7};
 
     static {
         FORUMS_MAP = new LinkedHashMap<>(FORUMS.length);
@@ -212,13 +216,13 @@ public class HiUtils {
                 || uid.length() > AVATAR_BASE.length()
                 || !TextUtils.isDigitsOnly(uid))
             return "";
-
-        String fullUid = AVATAR_BASE.substring(0, AVATAR_BASE.length() - uid.length()) + uid;
-        String url = AvatarBaseUrl
-                + fullUid.substring(0, 3) + "/"
-                + fullUid.substring(3, 5) + "/"
-                + fullUid.substring(5, 7) + "/"
-                + fullUid.substring(7, 9) + HiUtils.AvatarSuffix;
+        String url = AvatarBaseUrl + "?uid=" + uid + "&size=middle";
+//        String fullUid = AVATAR_BASE.substring(0, AVATAR_BASE.length() - uid.length()) + uid;
+//        String url = AvatarBaseUrl
+//                + fullUid.substring(0, 3) + "/"
+//                + fullUid.substring(3, 5) + "/"
+//                + fullUid.substring(5, 7) + "/"
+//                + fullUid.substring(7, 9) + HiUtils.AvatarSuffix;
         return url;
     }
 
