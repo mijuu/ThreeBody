@@ -14,6 +14,8 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
+def myVersionCode = 4306
+def myVersionName = "4.3.06"
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion as int
@@ -23,6 +25,8 @@ android {
         applicationId "net.jejer.threebody.ng"
         minSdkVersion rootProject.ext.minSdkVersion as int
         targetSdkVersion rootProject.ext.targetSdkVersion as int
+        versionCode myVersionCode
+        versionName myVersionName
     }
 
     buildTypes {
@@ -33,7 +37,7 @@ android {
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
                     output.outputFile = new File(output.outputFile.parent,
-                            output.outputFile.name.replace("-release", "-ng-release")
+                            output.outputFile.name.replace("-release", "-ng-release-" + myVersionName)
                     )
                 }
             }
