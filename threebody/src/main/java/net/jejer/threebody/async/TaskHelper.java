@@ -25,7 +25,7 @@ import java.util.Map;
  */
 public class TaskHelper {
 
-    private static final String SETTING_URL = "https://coding.net/u/GreenSkinMonster/p/hipda/git/raw/master/hipda.json";
+    private static final String SETTING_URL = "https://coding.net/u/mijuu/p/ThreeBody/git/raw/master/threebody.json";
 
     public static void runDailyTask(boolean force) {
         String millis = HiSettingsHelper.getInstance()

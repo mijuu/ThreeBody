@@ -43,8 +43,8 @@ public class UpdateHelper {
         mSilent = isSilent;
 
         checkSite = "coding";
-        checkUrl = "https://coding.net/u/GreenSkinMonster/p/hipda/git/raw/master/hipda-ng.md";
-        downloadUrl = "https://coding.net/u/GreenSkinMonster/p/hipda/git/raw/master/releases/hipda-ng-release-{version}.apk";
+        checkUrl = "https://coding.net/u/mijuu/p/ThreeBody/git/raw/master/threebody-ng.md";
+        downloadUrl = "https://coding.net/u/mijuu/p/ThreeBody/git/raw/master/releases/threebody-ng-release-{version}.apk";
     }
 
     public void check() {
