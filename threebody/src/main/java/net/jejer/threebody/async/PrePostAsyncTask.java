@@ -115,7 +115,7 @@ public class PrePostAsyncTask extends AsyncTask<PostBean, Void, PrePostInfoBean>
             prePostInfo.setUid(Utils.getMiddleString(scriptES.first().data(), "discuz_uid = ", ","));
         }
 
-        Elements hashES = doc.select("input[name=hash]");
+        Elements hashES = doc.select("input[name=formhash]");
         if (hashES.size() < 1) {
             return prePostInfo;
         } else {
