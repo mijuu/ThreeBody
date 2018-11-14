@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ThreeBody·NG</string>
-    <string name="author">作者 ：绿皮怪兽, 移植 ：Mijuu</string>
+    <string name="app_name">三体</string>
+    <string name="author">作者：绿皮怪兽，移植：Mijuu</string>
     <string name="action_refresh">刷新</string>
     <string name="action_image_gallery">图片浏览</string>
     <string name="action_reply">回复</string>

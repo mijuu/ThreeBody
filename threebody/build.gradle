@@ -14,8 +14,8 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
-def myVersionCode = 4306
-def myVersionName = "4.3.06"
+def myVersionCode = 4307
+def myVersionName = "4.3.07"
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion as int
