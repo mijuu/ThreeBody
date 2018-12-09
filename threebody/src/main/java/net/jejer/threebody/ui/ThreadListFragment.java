@@ -233,8 +233,8 @@ public class ThreadListFragment extends BaseFragment
                 mForumTypeMenuItem.setIcon(new IconicsDrawable(mCtx, HiUtils.BS_TYPE_ICONS[typeIdIndex])
                         .color(HiSettingsHelper.getInstance().getToolbarTextColor()).actionBar());
         }
-        MenuItem showStickItem = menu.findItem(R.id.action_show_stick_threads);
-        showStickItem.setChecked(HiSettingsHelper.getInstance().isShowStickThreads());
+//        MenuItem showStickItem = menu.findItem(R.id.action_show_stick_threads);
+//        showStickItem.setChecked(HiSettingsHelper.getInstance().isShowStickThreads());
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -271,12 +271,12 @@ public class ThreadListFragment extends BaseFragment
                     refresh();
                 }
                 return true;
-            case R.id.action_show_stick_threads:
-                item.setChecked(!item.isChecked());
-                HiSettingsHelper.getInstance().setShowStickThreads(item.isChecked());
-                mLoadingView.setState(ContentLoadingView.LOAD_NOW);
-                refresh();
-                return true;
+//            case R.id.action_show_stick_threads:
+//                item.setChecked(!item.isChecked());
+//                HiSettingsHelper.getInstance().setShowStickThreads(item.isChecked());
+//                mLoadingView.setState(ContentLoadingView.LOAD_NOW);
+//                refresh();
+//                return true;
             case R.id.action_open_by_url:
                 showOpenUrlDialog();
                 return true;
@@ -637,7 +637,7 @@ public class ThreadListFragment extends BaseFragment
 
             if (mPage <= 5 && mThreadBeans.size() < MIN_TREADS_IN_PAGE) {
                 if (mPage == 1 && mThreadBeans.size() == 0)
-                    UIUtils.toast("置顶贴较多，请在网页版论坛 个人中心 \n将 论坛个性化设定 - 每页主题 设为 默认");
+//                    UIUtils.toast("置顶贴较多，请在网页版论坛 个人中心 \n将 论坛个性化设定 - 每页主题 设为 默认");
                 mPage++;
                 mInloading = true;
                 ThreadListJob job = new ThreadListJob(getActivity(), mSessionId, mForumId, mPage);

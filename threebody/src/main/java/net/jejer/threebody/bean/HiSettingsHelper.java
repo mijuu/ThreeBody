@@ -364,8 +364,9 @@ public class HiSettingsHelper {
     }
 
     private boolean isShowStickThreadsFromPref() {
-        mShowStickThreads = mSharedPref.getBoolean(PERF_SHOWSTICKTHREADS, false);
-        return mShowStickThreads;
+        mShowStickThreads = mSharedPref.getBoolean(PERF_SHOWSTICKTHREADS, true);
+        return true;
+//        return mShowStickThreads;
     }
 
     public void setShowStickThreads(boolean showStickThreads) {
